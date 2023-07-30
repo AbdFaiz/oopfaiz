@@ -1,12 +1,14 @@
 <?php
 
 class Pakaian {
-    protected $merk;
-    protected $ukuran;
+    public $merk;
+    protected $warna;
+    private $ukuran;
 
-    public function __construct($merk, $ukuran) {
+    public function __construct($merk, $warna, $ukuran) {
         echo "Selamat datang!<br>";
         $this->merk = $merk;
+        $this->warna = $warna;
         $this->ukuran = $ukuran;
     }
 
@@ -20,6 +22,14 @@ class Pakaian {
 
     public function getMerk() {
         return $this->merk;
+    }
+
+    public function setWarna($warna) {
+    $this->warna = $warna;
+    }
+
+    public function getWarna() {
+    return $this->warna;
     }
 
     public function setUkuran($ukuran) {
@@ -53,16 +63,16 @@ class PakaianDalam extends Pakaian {
     }
 }
 
-$baju = new Baju("Adidas", "L");
-echo "Merk Baju: " . $baju->getMerk() . ", Ukuran: " . $baju->getUkuran() . ".<br>";
+$baju = new Baju("Adidas","Hitam", "L");
+echo "Merk Baju: " . $baju->getMerk() . ", Warna: " .$baju->getWarna() . ", Ukuran: " . $baju->getUkuran() . ".<br>";
 $baju->ada(); 
 
-$celana = new Celana("Levi's", "32");
-echo "Merk Celana: " . $celana->getMerk() . ", Ukuran: " . $celana->getUkuran() . ".<br>";
+$celana = new Celana("Levi's","Putih", "32");
+echo "Merk Celana: " . $celana->getMerk() .  ", Warna: " .$celana->getWarna() . ", Ukuran: " . $celana->getUkuran() . ".<br>";
 $celana->ada(); 
 
-$pakaianDalam = new PakaianDalam("Calvin Klein", "M");
-echo "Merk Pakaian Dalam: " . $pakaianDalam->getMerk() . ", Ukuran: " . $pakaianDalam->getUkuran() . ".<br>";
+$pakaianDalam = new PakaianDalam("Calvin Klein","Hijau", "M");
+echo "Merk Pakaian Dalam: " . $pakaianDalam->getMerk() .  ", Warna: " .$pakaianDalam->getWarna() . ", Ukuran: " . $pakaianDalam->getUkuran() . ".<br>";
 $pakaianDalam->cuci(); 
 
 ?>

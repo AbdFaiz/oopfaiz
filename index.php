@@ -67,9 +67,13 @@ $baju = new Baju("Adidas","Hitam", "L");
 echo "Merk Baju: " . $baju->getMerk() . ", Warna: " .$baju->getWarna() . ", Ukuran: " . $baju->getUkuran() . ".<br>";
 $baju->ada(); 
 
+echo"<br>";
+
 $celana = new Celana("Levi's","Putih", "32");
 echo "Merk Celana: " . $celana->getMerk() .  ", Warna: " .$celana->getWarna() . ", Ukuran: " . $celana->getUkuran() . ".<br>";
-$celana->ada(); 
+$celana->ada();
+
+echo"<br>";
 
 $pakaianDalam = new PakaianDalam("Calvin Klein","Hijau", "M");
 echo "Merk Pakaian Dalam: " . $pakaianDalam->getMerk() .  ", Warna: " .$pakaianDalam->getWarna() . ", Ukuran: " . $pakaianDalam->getUkuran() . ".<br>";
